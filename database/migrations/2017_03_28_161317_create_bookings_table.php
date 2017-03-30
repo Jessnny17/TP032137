@@ -19,6 +19,7 @@ class CreateBookingsTable extends Migration
             $table->integer('schedule_id')->unsigned();
             $table->integer('weight')->unsigned();
             $table->integer('quantity')->unsigned();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

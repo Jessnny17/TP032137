@@ -26,7 +26,7 @@
                     	<td>{{ $user->id }}</td>
                     	<td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                    	<td>Agent</td>
+                    	<td>{{ ucfirst($user->user_type) }}</td>
                     	<td>
                     		<a href="/users/{{ $user->id }}/edit" class="btn btn-info btn-xs">Edit</a>
                     		<a href="/users/{{ $user->id }}/edit" class="btn btn-danger btn-xs">Delete</a>

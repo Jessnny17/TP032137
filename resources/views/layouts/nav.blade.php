@@ -25,8 +25,10 @@
                    <li><a href="/users">Users</a></li>    
                 @endif
                 @if (Auth::check())
-                   <li><a href="/customers">Customer Profiles</a></li>      
-                   <li><a href="/bookings">Bookings</a></li>      
+                    <li><a href="/bookings">Bookings</a></li>     
+                @endif
+                @if (Auth::check() && Auth::user()->isAgent())
+                   <li><a href="/customers">Customer Profiles</a></li>                          
                    <li><a href="/settings">Settings</a></li>    
                 @endif
             </ul>

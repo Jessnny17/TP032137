@@ -4,7 +4,11 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+             <div class="pull-right">
+                <b>Status:</b> <div class="label label-warning">{{ $booking->status }}</div>
+            </div>
             <h2>Booking Information</h2>
+            
             <hr>
         </div>
         <div class="col-md-8">
