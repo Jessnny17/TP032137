@@ -28,6 +28,7 @@ Route::get('settings','SettingController@index');
 Route::post('settings/updatepass','SettingController@updatepass');
 
 Route::get('bookings','BookingController@index');
+Route::get('bookings/create','BookingController@create');
 Route::get('bookings/create/{schedule}','BookingController@showform');
 Route::post('bookings/create/{schedule}','BookingController@store');
 Route::get('bookings/{booking}','BookingController@show');

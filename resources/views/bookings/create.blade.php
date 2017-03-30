@@ -27,7 +27,7 @@
         </div>
         <div class="col-md-8">
             <div class="panel panel-primary">
-                <div class="panel-heading">Select Schedule</div>                  
+                <div class="panel-heading">Available Dates</div>                  
                 <table class="table">
                     <tr>
                         <th>Departure Time</th>
@@ -37,7 +37,7 @@
                         <th>Action</th>                        
                     </tr>
                     @foreach ($schedules as $schedule)
-                    <tr>
+                    <tr class="{{ $date->format('Y-m-d') == $schedule->departure_time->format('Y-m-d') ? "success" : "" }}">
                         <td>{{ $schedule->departure_time->format('jS \\of F Y h:i:s A') }}</td>
                         <td>{{ $schedule->ship->name }}</td>
                         <td>{{ $schedule->departure_port }}</td>

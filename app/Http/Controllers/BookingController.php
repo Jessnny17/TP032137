@@ -6,6 +6,7 @@ use App\Booking;
 use App\Schedule;
 use App\Customer;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class BookingController extends Controller
 {
@@ -29,6 +30,7 @@ class BookingController extends Controller
     		$date = $request->input('departure_time');
     	}
     	$schedules = Schedule::where('departure_time','>',$date)->get();
+        $date = Carbon::parse($date);
     	return view('bookings.create',compact('schedules','date','weight','quantity'));
     	// return view('bookings.)
     }
