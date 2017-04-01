@@ -13,3 +13,6 @@
   `php artisan migrate`
   
 - Thats it!
+
+### Author
+Ismail Zahee Zahid
