@@ -1,9 +1,21 @@
 # Container Management System
+DDAC assignment project
 
-## Setup
+
+### Requirements
+
+* PHP >= 7.0
+* Composer
+
+
+### Setup
+
 - Clone the project and create a copy of the .env.example to .env   
  `cp .env.example .env`
  
+- Install Composer dependencies
+ `composer install`
+
 - Generate a key  
  `php artisan key:generate`
  
